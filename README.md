@@ -1,1 +1,2 @@
 # time-series-on-covid-19-data
+In this project, I attempt to use time series analysis and forecasting to predict new Covid-19 cases in Washington state. I will use the states data from <covidactnow.org>. My goal is gain a deeper understanding of time series by creating a model (most-likely something related to ARIMA) that most accurately captures the behaviour of the data from January 1st 2021 to December 31st 2021.
