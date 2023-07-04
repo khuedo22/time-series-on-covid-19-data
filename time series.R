@@ -60,11 +60,11 @@ fit3 <- Arima(washington_training, order=c(5, 1, 5), seasonal=c(3, 0, 0))
 fit3 %>% checkresiduals()
 
 #comparing model with testing data
-fit7 %>% forecast(h=15) %>% autoplot() + autolayer(washington_testing)
-fit6 %>% forecast(h=15) %>% autoplot() + autolayer(washington_testing)
+fit1 %>% forecast(h=15) %>% autoplot() + autolayer(washington_testing, series="testing") 
+fit2 %>% forecast(h=15) %>% autoplot() + autolayer(washington_testing)
 
-autoplot(washington_training, series="training") + autolayer(fitted(fit6, h=15), series="model and predictions")
-test <- Arima(washington_testing, model=fit6)
+autoplot(washington_training, series="training") + autolayer(fitted(fit1, h=15), series="ARIMA model")
+test <- Arima(washington_testing, model=fit1)
 accuracy(test)
 
 
